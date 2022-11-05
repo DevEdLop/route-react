@@ -8,7 +8,8 @@ const User = () => {
 
     useEffect(() => {
         obtenerDatos()
-    }, [])
+        // eslint-disable-next-line
+    }, [id])
 
     const obtenerDatos = async () => {
         const datos = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
